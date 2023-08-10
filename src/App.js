@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./App.css"
+// import HomePage from "./home/HomePage"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+// import SinglePage from "./components/watch/SinglePage"
+import Navbar from "./components/Navbar/Navbar"
+import Header from "./components/Header/Header"
+import Header__top from "./components/Header__top/Header__top"
+import Header__down from "./components/Header__down/Header__down"
+import Article__slider from "./components/Article__slider/Article__slider"
+import Video__slider from "./components/Video__slider/Video__slider"
+import Video__slider_latest from "./components/Video__slider_latest/Video__slider_latest"
+import Footer from "./components/Footer/Footer"
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Header__top/>
+        <Header__down/>
+
+        <Article__slider/>
+        <Video__slider/>
+        <Video__slider_latest/>
+        {/* <Header/> */}
+
+        <Switch>
+        {/* <Route exact path='/' component={HomePage} /> */}
+        {/* <Route path='/singlepage/:id' component={SinglePage} exact /> */}
+          
+        </Switch>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

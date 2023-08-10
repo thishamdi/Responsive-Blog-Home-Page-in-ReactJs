@@ -1,0 +1,278 @@
+/*---------------global-------------*/
+/*---------------control-btn-------------*/
+.control-btn button {
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control-btn .next {
+    position: absolute;
+    top: 50%;
+    right: -43px;
+    transform: translate(-50%, -50%);
+
+}
+
+.control-btn .prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+    z-index: 99;
+}
+
+.upcome {
+    font-family: "changa", sans-serif;
+
+}
+
+/*---------------control-btn-------------*/
+.heading {
+    font-family: "changa", sans-serif;
+    height: 10vh;
+    margin: 20px 0;
+
+}
+
+.heading h1 {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.heading a {
+    color: #e50813;
+    font-size: 1rem;
+}
+
+/*---------------MovieBox-------------*/
+
+.video__slider_latest .MovieBox {
+    width: 430px;
+    height: 300px;
+    position: relative;
+    transition: 0.5s;
+    border-bottom: unset;
+}
+
+
+
+.MovieBox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.4) 50%, rgba(83, 100, 141, 0) 100%);
+    z-index: -1;
+
+}
+
+.video__slider_latest .MovieBox:hover {
+    cursor: pointer;
+    border-bottom: unset;
+    /* transform: scale3d(1.1, 1.1, 1) translate3d(-6%, 0, 0) perspective(31.25em); */
+    /* box-shadow: 0px 0px 0.75em rgba(0, 0, 0, 0.9); */
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /******************************/
+    background-color: rgba(229, 8, 19, 0.5);
+    /* background: linear-gradient(90deg, rgba(229,8,19,0.49352240896358546) 0%, rgba(229,8,19,0.8940826330532213) 60%); */
+
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 200;
+}
+
+.MovieBox:hover .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.video__slider_latest .MovieBox:hover .text {
+    opacity: 0.5;
+}
+
+.MovieBox .card-btn {
+    /* font-family: "changa", sans-serif; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 600;
+    padding: 12px 22px;
+    font-size: 1.8rem;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #e50813;
+    border-radius: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 201;
+    border: none;
+    opacity: 0;
+    scale: 0;
+    transform-origin: 0 0;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.MovieBox:hover .card-btn {
+    opacity: 1;
+    scale: 1;
+}
+
+
+.MovieBox .card-btn:hover {
+    box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.MovieBox .card-btn:active {
+    scale: 0.95;
+}
+
+
+
+.video__slider_latest .MovieBox .text {
+    font-family: "tajawal", sans-serif;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 150;
+    width: 75%;
+    color: #fff;
+    text-align: right;
+}
+
+
+
+
+.video__slider_latest .MovieBox .banner-details p {
+    font-size: 1rem;
+}
+
+
+.video__slider_latest  .MovieBox .banner-details span {
+    font-size: 0.9rem;
+}
+
+.MovieBox .banner-details span {
+    font-size: 1rem;
+}
+
+
+.video__slider_latest .content__tags {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: -22%;
+}
+
+.video__duration {
+    font-family: "changa", sans-serif;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 6px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    line-height: unset;
+    opacity: 0.9;
+}
+
+/* .MovieBox .banner-details::after {
+    content: '';
+    background: #e50813;
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    right: 50px;
+} */
+
+/* .MovieBox button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 13px;
+    cursor: pointer;
+} */
+
+/* .MovieBox button i {
+    margin-right: 10px;
+} */
+
+/*---------------MovieBox-------------*/
+@media only screen and (max-width: 768px) {
+    .MovieBox {
+        width: 320px;
+        height: 250px;
+    }
+
+    .MovieBox h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+
+    .MovieBox .para__text {
+        font-size: 0.8rem;
+        text-align: right;
+    }
+
+
+    .control-btn button {
+
+        width: 35px;
+        height: 35px;
+
+    }
+
+    .control-btn .next {
+        position: absolute;
+        top: 50%;
+        right: -35px;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .control-btn .prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+
+        z-index: 99;
+    }
+
+    /* .MovieBox .text {
+        font-family: "tajawal", sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 150;
+        width: 70%;
+        color: #fff;
+    } */
+}

@@ -1,0 +1,240 @@
+.banner-area {
+    /* margin-top: 100px; */
+    font-family: "Tajawal", sans-serif;
+    height: calc(100vh - 10vh);
+}
+
+
+.banner-area .single-banner {
+    position: relative;
+}
+
+.banner-area .single-banner .banner-img {
+    height: calc(100vh - 10vh);
+    overflow: hidden;
+
+}
+
+.banner-area .single-banner .banner-img::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0,0,0,0.55); */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)); */
+    background-image: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+
+}
+
+.banner-area .banner-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-area .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    
+}
+
+.banner-area .banner-text .header__title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.banner-area .banner-text .para__text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+
+
+}
+.banner-area .banner-text button {
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.2rem;
+}
+
+
+.banner-area .slick-dots {
+    position: absolute;
+    bottom: 25px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.banner-area .slick-dots li button:before {
+    font-size: 10px;
+    color: #fff;
+}
+.banner-area .slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+
+
+
+@media(max-width: 992px){
+    .banner-area .banner-text {
+        width: 70%;
+    }
+    .banner-area .banner-text .header__title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .banner-area .banner-text .para__text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    
+    
+    }
+}
+
+/* .slick-dots li {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    position: relative;
+    background-color: #fff;
+    opacity: .25;
+    width: 50px;
+    height: 3px;
+    padding: 0;
+    font-size: 0;
+}
+.slick-dots li.slick-active button {
+    color: #fff;
+    opacity: .75;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .carousel {
+
+    padding: 5rem;
+    height: 100vh;
+    width: 100vw;
+    background-color: brown;
+    color: #fff;
+}
+
+.slid {
+    height: 300px;
+    background-color: aqua;
+} */
+
+/* .header{
+    font-family: "Tajawal", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(../../assets/images/home.jpg) center/cover no-repeat;
+
+}
+
+.slick-slider {
+    max-width:  100vw;
+    min-height: calc(100vh - 70px);}
+.header__content{
+    
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.header__content--right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    max-width: 60%;
+
+}
+
+
+.header__content--right button {
+    font-family: "Tajawal", sans-serif;
+    font-size: 1.3rem;
+    max-width: 25%;
+
+}
+
+.header__title{
+    font-size: 3rem;
+    line-height: 1.2;
+}
+.header__content .para__text{
+    max-width: 600px;
+    font-size: 1.1rem;
+
+} 
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media(min-width: 992px){
+    .header__content{
+        flex-direction: row;
+    }
+    .header__content--right{
+        text-align: left;
+        width: 50%;
+    }
+    .header__content--left{
+        width: 50%;
+    }
+    .header__content--right .para__text{
+        margin-left: 0;
+    }
+} */
